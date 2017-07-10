@@ -1,0 +1,34 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="txt" class="form-control"= placeholder="Nome" ng-model="vm.modelo.nome">
+        </div>
+        <div ng-controller="MarcaController as marVm">
+            <label>Marca</label>
+            <select name="marca" ng-model="vm.modelo.marca" class="form-control" id="marca">
+            <option ng-repeat="item in marVm.marcas" value="{{item._id}}">{{item.nome}}</option>
+            </select>
+        </div>
+        <br>
+
+        <button class="btn btn-primary" ng-click="vm.salvar()">Cadastrar</button>                
+    </form>
+
+    <br>
+
+    <table class="table table-inverse">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Marca</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="modelo in vm.modelos">
+                <td>{{modelo.nome}}</td>
+                <td>{{modelo.marca}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>    

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Carros usados - Criciúma</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="MainController as vm">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Carros usados</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/marcas">Marcas</a>
+                    </li>
+                    <li>
+                        <a href="#/modelos">Modelos</a>
+                    </li>
+                </ul>
+                <div class="pull-right" >
+                    <a href="#/anunciar">
+                        <button class="btn navbar-btn btn-primary" href="#/modelos">Anunciar</button>
+                    </a>    
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+            
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <ng-view></ng-view>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vendors/bootstrap/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/vendors/angular/angular.min.js"></script>
+    <script src="js/vendors/angular/angular-route.min.js"></script>
+    <script src="js/vendors/angular/angular-locale_pt-br.js"></script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendors/bootstrap/jquery.min.js"><\/script>')</script>
+    <script src="js/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendors/bootstrap/bootbox.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/vendors/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/vendors/angular/angular.min.js"></script>
+    <script src="js/vendors/angular/angular-route.min.js"></script>
+    <script src="js/vendors/angular/angular-locale_pt-br.js"></script>
+    <script src="js/vendors/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/controllers/main.controller.js"></script>
+    <script src="js/controllers/marca.controller.js"></script>
+    <script src="js/controllers/modelo.controller.js"></script>
+    <script src="js/controllers/anuncio.controller.js"></script>
+    <script src="js/services/marca.service.js"></script>
+    <script src="js/services/modelo.service.js"></script>
+    <script src="js/services/anuncio.service.js"></script>
+
+
+
+</body>
+
+</html>

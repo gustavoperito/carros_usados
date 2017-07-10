@@ -1,0 +1,39 @@
+<div class="col-md-12">
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label>Título</label>
+            <input type="txt" class="form-control"=p laceholder="Título" ng-model="vm.anuncio.titulo">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label>Descrição</label>
+            <input type="txt" class="form-control"=p laceholder="Descrição" ng-model="vm.anuncio.descricao">
+        </div>
+    </div>
+    <div class="row">
+        <div ng-controller="ModeloController as modVm" class="col-md-12">
+            <label>Modelo</label>
+            <select name="modelo" ng-model="vm.anuncio.modelo" class="form-control" id="modelo">
+            <option ng-repeat="item in modVm.modelos" value="{{item._id}}">{{item.nome}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Preço</label>
+                <div class="input-group">
+                    <span class="input-group-addon">R$</span>
+                    <input ng-model="vm.anuncio.preco" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.salvar()">Anunciar</button>
+        </div>
+    </div>
+</div>

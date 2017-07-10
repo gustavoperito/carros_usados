@@ -1,0 +1,31 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="txt" class="form-control"= placeholder="Nome" ng-model="vm.marca.nome">
+        </div>
+        <div class="form-group">
+            <label>Sigla</label>
+            <input type="txt" class="form-control" placeholder="Sigla" ng-model="vm.marca.sigla">
+        </div>
+
+        <button class="btn btn-primary" ng-click="vm.salvar()">Cadastrar</button>                
+    </form>
+
+    <br>
+
+    <table class="table table-inverse">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sigla</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="marca in vm.marcas">
+                <td>{{marca.nome}}</td>
+                <td>{{marca.sigla}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
